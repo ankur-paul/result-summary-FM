@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.8rem;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.result-summary {
+  max-width: 75rem;
+  margin: 10rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 3.5rem;
+  box-shadow: 0 20px 25px 15px hsla(222, 100%, 96%, 0.726);
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+/* ****************************************** */
+/*  PERCENTAGE COULUMN */
+/* ****************************************** */
+
+.percentage-cl {
+  padding: 4rem 5rem;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 3.5rem;
+}
+
+.your-result {
+  text-align: center;
+  color: hsl(241, 100%, 89%);
+  text-align: center;
+  font-weight: 700;
+}
+
+.per-circle {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  overflow: auto;
+}
+
+.percentage {
+  text-align: center;
+  margin-top: 4rem;
+  /* margin-bottom: 0; */
+  font-size: 9rem;
+  color: white;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.of-100 {
+  color: hsla(241, 100%, 89%, 0.74);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.impression {
+  font-size: 3.1rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.msg {
+  text-align: center;
+  color: hsl(241, 100%, 89%);
+}
+
+/* ****************************************** */
+/*  SUMMARY COULUMN */
+/* ****************************************** */
+.summary-cl {
+  margin: 4rem 3.5rem;
+  background-color: white;
+}
+
+.summary-grid {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* font-weight: 500; */
+}
+
+.summary-row {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem;
+  border-radius: 1.22rem;
+}
+
+.reaction-row {
+  background-color: hsla(0, 100%, 67%, 0.06);
+}
+.memory-row {
+  background-color: hsla(39, 100%, 56%, 0.06);
+}
+.verbal-row {
+  background-color: hsla(166, 100%, 37%, 0.06);
+}
+.visual-row {
+  background-color: hsla(234, 85%, 45%, 0.06);
+}
+
+.reaction {
+  color: hsl(0, 100%, 67%);
+}
+.memory {
+  color: hsla(39, 100%, 56%);
+}
+
+.verbal {
+  color: hsla(166, 100%, 37%);
+}
+
+.visual {
+  color: hsla(234, 85%, 45%);
+}
+.summary-row .score {
+  flex: 1;
+  text-align: right;
+}
+
+.score {
+  color: hsl(224, 30%, 27%);
+  font-weight: 700;
+}
+span {
+  color: hsl(241, 100%, 89%);
+}
+
+button {
+  margin-top: 4rem;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: hsl(224, 30%, 27%);
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #333;
+  position: absolute;
+  left: 50vw;
+  transform: translate(-50%);
+
+  bottom: 1rem;
+}
+.attribution a {
+  color: hsl(224, 30%, 27%);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* ****************************************** */
+/*  BELOW 375px WIDTH */
+/* ****************************************** */
+
+@media (max-width: 24em) {
+  html {
+    font-size: 50%;
+    /* overflow-x: hidden; */
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+  .result-summary {
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .percentage-cl {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .summary-grid {
+    margin-top: 2.5rem;
+  }
+
+  .attribution {
+    position: relative;
+    margin: 2rem auto 0;
+  }
+}
